@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Entornos
+.env
+.venv
+env/
+venv/
+
+# Datos sensibles
+*.json
+estado_actual.json
+coldroute_dev.db
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
