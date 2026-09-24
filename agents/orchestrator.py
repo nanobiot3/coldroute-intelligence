@@ -4,7 +4,10 @@ Coordina los 5 agentes especializados y produce
 inteligencia unificada para el dashboard ejecutivo
 y el Copilot de operaciones portuarias.
 """
-import sys, json
+import sys, os, json
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 from datetime import datetime
 from typing import Dict, Optional
 import pandas as pd

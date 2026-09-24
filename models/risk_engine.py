@@ -10,8 +10,10 @@ import pandas as pd
 from scipy.stats import qmc, genpareto, norm
 from scipy.optimize import minimize
 from typing import Dict, List
-import sys
-sys.path.insert(0, '/home/claude/coldroute')
+import sys, os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 from config.settings import ML_CONFIG, STRESS_SCENARIOS, TEMP_THRESHOLDS, PUERTOS
 
 class AgenteMotoRiesgo:

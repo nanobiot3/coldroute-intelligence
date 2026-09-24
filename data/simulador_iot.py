@@ -7,8 +7,10 @@ import pandas as pd
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
 import random
-import sys
-sys.path.insert(0, '/home/claude/coldroute')
+import sys, os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 from config.settings import TEMP_THRESHOLDS, PUERTOS, ML_CONFIG
 
 rng = np.random.default_rng(ML_CONFIG["seed"])

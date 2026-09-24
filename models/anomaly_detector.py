@@ -8,8 +8,10 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 from typing import Dict, List, Tuple
-import sys
-sys.path.insert(0, '/home/claude/coldroute')
+import sys, os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 from config.settings import TEMP_THRESHOLDS, ML_CONFIG
 
 class AgenteDetectorAnomalias:

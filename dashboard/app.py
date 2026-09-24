@@ -5,7 +5,12 @@ URL: coldroute.streamlit.app
 Metodología JP Morgan Fusion aplicada a puertos del Biobío
 """
 import sys
-sys.path.insert(0, '/home/claude/coldroute')
+import os
+
+# Funciona tanto en local como en Streamlit Cloud
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 
 import streamlit as st
 import pandas as pd

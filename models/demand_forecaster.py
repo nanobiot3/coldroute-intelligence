@@ -13,8 +13,10 @@ from sklearn.model_selection import TimeSeriesSplit
 from typing import Dict, Tuple
 import warnings
 warnings.filterwarnings("ignore")
-import sys
-sys.path.insert(0, '/home/claude/coldroute')
+import sys, os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 from config.settings import ML_CONFIG
 
 class AgenteForecastDemanda:
